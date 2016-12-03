@@ -175,22 +175,20 @@ void* instruction_manager_handler( void* arg ) {
             if(strcmp(buffer, LED_activate_command) == 0) {
                 light_manager.instruction_code = LED_ON;
                 light_manager.pin_number = 7;
-                light_manager.last_modified = time(NULL);
             } else if(strcmp(buffer, LED_deactivate_command) == 0) {
                 light_manager.instruction_code = LED_OFF;
                 light_manager.pin_number = 7;
-                light_manager.last_modified = time(NULL);
             } else if(strcmp(buffer, AIR_activate_command) == 0) {
                 light_manager.instruction_code = AIR_ON;
                 light_manager.pin_number = 6;
-                light_manager.last_modified = time(NULL);
             } else if(strcmp(buffer, AIR_deactivate_command) == 0) {
                 light_manager.instruction_code = AIR_OFF;
                 light_manager.pin_number = 6;
-                light_manager.last_modified = time(NULL);
             } else {
                 continue;
             }
+
+            light_manager.last_modified = time(NULL);
 
             /* TODO: Another else if that support a call to change the active pin would be nice */
 
