@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections>
+    <database_config>
+        <server>localhost</server>
+        <database_name>hydroponic_garden</database_name>
+        <username></username>
+        <password></password>
+    </database_config>
+</connections>
