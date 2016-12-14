@@ -1,11 +1,11 @@
 /* *** Description Section *** */
-#description_thumbnail {
+#description_thumbnail_img {
     width: 100px;
     height: 100px;
 }
 
 #description_text {
-    width: 250px;
+    width: 450px;
 }
 
 .well {
