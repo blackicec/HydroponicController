@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="hydroponicApp">
+    <head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="styles/form_elements.css" rel="stylesheet"/>
+        <link rel="icon" type="image/png" href="resources/images/strawberry_plant_favicon.png">
+
+        <script src="js/utilities/jquery-3.1.1.min.js"></script>
+        <script src="js/utilities/typeahead.bundle.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+        <script src="js/controllers/hydroponic_controller.js"></script>
+        <script src="js/controllers/header_controller.js"></script>
+    </head>
+    <title>Welcome to My Hydroponic Garden</title>
+
+    <body>
+        <div>
+            <!-- Include a copy of the navigation bar-->
+            <div ng-include="'./html_partials/navbar_header.html'"></div>
+
+            <div ng-controller="HydroponicController" class="well">
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a id="description_thumbnail_anchor" href="#">
+                            <img id="description_thumbnail_img" class="media-object" ng-src="./resources/images/{{thumbnail_source}}" />
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Introduction</h3>
+                        <div>
+                            <p id="description_text">{{description}}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!--<div ng-controller="HydroponicController">
+                <div class="list-group">
+                    <li ng-repeat="system in Systems" class="list-group-item">
+                        <label>{{system.plant_name}}</label>
+                        <label>was planted on {{system.date_planted}}</label>
+                    </li>
+                </div>
+            </div>-->
+        </div>
+    </body>
+</html>
