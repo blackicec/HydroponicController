@@ -29,21 +29,13 @@
                     <div class="media-body">
                         <h3 class="media-heading">Introduction</h3>
                         <div>
-                            <p id="description_text">{{description}}</p>
+                            <p ng-repeat="paragraph in description_list track by $index" class="description_paragraph">
+                                {{paragraph}}
+                            </p>
                         </div>
                     </div>
-                    
                 </div>
             </div>
-
-            <!--<div ng-controller="HydroponicController">
-                <div class="list-group">
-                    <li ng-repeat="system in Systems" class="list-group-item">
-                        <label>{{system.plant_name}}</label>
-                        <label>was planted on {{system.date_planted}}</label>
-                    </li>
-                </div>
-            </div>-->
         </div>
     </body>
 </html>

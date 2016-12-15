@@ -1,4 +1,5 @@
 <?php
+    header('Access-Control-Allow-Origin: http://localhost', false);
     include('./application_details.php');
 
     const DATABASE_NAME = 'hydroponic_garden';

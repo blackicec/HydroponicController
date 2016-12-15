@@ -26,7 +26,11 @@
             if($result->num_rows > 0) {
                 $data_row = $result->fetch_assoc();
 
-                return $data_row['DETAILS'];
+                // The description details will now be split into paragraphs based on an identifier (&&)
+                $paragraphs = explode('&&', $data_row['DETAILS']);
+
+                // Return a json representation of our paragraph array
+                return json_encode($paragraphs);
             } else {
                 return 'No description available.';
             }

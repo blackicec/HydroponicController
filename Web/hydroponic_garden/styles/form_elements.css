@@ -4,8 +4,9 @@
     height: 100px;
 }
 
-#description_text {
-    width: 450px;
+.description_paragraph {
+    text-indent: 25px;
+    width: 700px;
 }
 
 .well {
